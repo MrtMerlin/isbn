@@ -6,7 +6,7 @@
 
         <div class="row mb-3">
             <div class="col-md-12">
-                <a href="{{ url()->previous() }}" class="btn btn-primary float-right">Back</a>
+                <a href="{{ route('welcome') }}" class="btn btn-primary float-right">Back</a>
             </div>
         </div>
 
@@ -16,15 +16,18 @@
             </h3>
         </div>
 
-        <ul style="list-style: none">
-            <li class="mb-1">
-                <h4>Title : {{$returnedCollection['title']}}</h4>
+        <ul style="list-style: none" class="mt-2">
+            <li class="mb-3 w-50">
+                <h4>Title</h4>
+                <span>{{$returnBook['title']}}</span>
             </li>
-            <li class="mb-1">
-                <h4>Description : {{$returnedCollection['description']}}</h4>
+            <li class="mb-3 w-50">
+                <h4>Description</h4>
+                <span>{{$returnBook['description']}}</span>
             </li>
-            <li class="mb-1">
-                <h4>Author : {{$returnedCollection['author']}}</h4>
+            <li class="mb-3 w-50">
+                <h4>Author</h4>
+                <span>{{$returnBook['author']}}</span>
             </li>
         </ul>
 
