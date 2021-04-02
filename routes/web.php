@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 Route::post('/fetchBook', [App\Http\Controllers\BookController::class, 'fetchBook'])->name('fetchBook');
 Route::get('/showBook', [App\Http\Controllers\BookController::class, 'showBook'])->name('showBook');
