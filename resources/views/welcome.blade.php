@@ -4,10 +4,10 @@
 
     <div class="container">
 
-        <form>
-
+{{--   form input for search --}}
+        <form method="POST" action="{{ route('fetchBook') }}">
+            @csrf
             <div class="row">
-
 
                 <div class="col-md-12">
 
@@ -32,7 +32,7 @@
 
                     @error('search')
 
-                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
 
                     @enderror
 
@@ -48,6 +48,8 @@
 
                         class="btn btn-primary float-right"
 
+                        id="search-submit"
+
                         type="submit">
 
                         Submit
@@ -62,3 +64,6 @@
     </div>
 
 @endsection
+
+
+
