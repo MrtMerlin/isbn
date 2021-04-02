@@ -27,12 +27,13 @@
                         id="search"
                         placeholder="Search for Book, Author, ISBN..."
                         value="{{ old('search') }}"
+                        {{--   required used on the input and valudation used within the controller as well   --}}
                         required
                     >
 
                     @error('search')
 
-                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                        <p class="alert-danger text-muted text-xs mt-2">{{ $message }}</p>
 
                     @enderror
 
